@@ -1,7 +1,7 @@
 # FFMPEG Cross-compiling with MingW and LLVM
 
 Original instructions for cross-compiling FFmpeg with MingW can be found at:
-https://trac.ffmpeg.org/wiki/CompilationGuide/CrossCompilingForWindows
+[https://trac.ffmpeg.org/wiki/CompilationGuide/CrossCompilingForWindows]
 
 However, the default MingW toolchain uses GCC as the compiler, and at this time it does not support ARM64 as a target on Win64. 
 
@@ -13,7 +13,7 @@ It targets all 4 architectures (even arm7!) and convenient binaries with the com
 
 Notice that you should download the toolchain for your host architecture (Linux 64 bits, Windows Intel, Windows ARM64). All binaries can cross-compile for all windows targets, follow the instructions at the LLVM-MINGW project page for installation.
 
-## Clone FFmpeg from the default GitHub repository. Then, configure for the appropriate target platform:
+Clone FFmpeg from the default GitHub repository. Then, configure for the appropriate target platform:
 
 ## For aarch64 (ARM64):
 
@@ -30,4 +30,4 @@ make
 ./configure --arch=i686 --target-os=mingw32 --cross-prefix=i686-w64-mingw32- --disable-indev=vfwcap --disable-decoder=hevc --disable-muxer=hevc
 make
 
-### As a convenience we have precompiled binaries built from FFmpeg master (Jun 13th 2020) included in this repository, cross-compiled from a Linux host.
+As a convenience we have precompiled binaries built from FFmpeg master (Jun 13th 2020) included in this repository, cross-compiled from a Linux host.
