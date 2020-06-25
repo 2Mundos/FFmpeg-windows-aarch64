@@ -17,6 +17,6 @@ mkdir output
 %FFMPEG% -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -hw_encoding 1 -rate_control quality -quality 50 -y -v verbose output\ff_hevc_quality50.mp4
 %FFMPEG% -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -hw_encoding 1 -rate_control quality -quality 100 -y -v verbose output\ff_hevc_quality100.mp4
 
-%FFMPEG% -hwaccel d3d11va -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -b:v 5000k -hw_encoding 1 -rate_control cbr -y output\ff_hevc_cbr.mp4
-%FFMPEG% -hwaccel d3d11va -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -b:v 5000k -hw_encoding 1 -rate_control pc_vbr -y output\ff_hevc_pcvbr.mp4
-%FFMPEG% -hwaccel d3d11va -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -b:v 5000k -hw_encoding 1 -rate_control u_vbr -y output\ff_hevc_uvbr.mp4
+%FFMPEG% -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -b:v 5000k -hw_encoding 1 -rate_control cbr -y output\ff_hevc_cbr.mp4
+%FFMPEG% -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -b:v 5000k -hw_encoding 1 -rate_control pc_vbr -y output\ff_hevc_pcvbr.mp4
+%FFMPEG% -i source.mp4 -c:v hevc_mf -pix_fmt nv12 -b:v 5000k -hw_encoding 1 -rate_control u_vbr -y output\ff_hevc_uvbr.mp4
